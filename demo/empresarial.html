@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tarjeta de presentación digital empresarial - [Empresa]" />
-  <title>[Empresa] - [Especialidad]</title>
+  <meta name="description" content="Tarjeta digital empresarial - Innovate Solutions" />
+  <title>Innovate Solutions - Consultoría Tecnológica</title>
   
   <style>
     :root {
-      --primary-color: #7c3aed;
-      --secondary-color: #a855f7;
-      --text-color: #1f2937;
-      --text-light: #6b7280;
-      --bg-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+      --primary-color: #ffffff;
+      --secondary-color: #00d4ff;
+      --text-color: #ffffff;
+      --text-secondary: #cbd5e1;
       --radius: 20px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -25,7 +24,7 @@
     }
 
     body {
-      background: #f8fafc;
+      background: #0f172a;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,21 +33,26 @@
     }
 
     .card {
-      background: white;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #5b21b6 100%);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       max-width: 420px;
       width: 100%;
       overflow: hidden;
       position: relative;
+      color: var(--text-color);
     }
 
     .header {
-      background: var(--bg-gradient);
-      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
       padding: 2rem 1.5rem 1rem;
       text-align: center;
       position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
@@ -56,8 +60,8 @@
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
       margin-bottom: 1rem;
+      border: 3px solid rgba(255, 255, 255, 0.3);
       background: white;
       padding: 5px;
     }
@@ -66,12 +70,14 @@
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      color: var(--text-color);
     }
 
     .company-tagline {
       font-size: 1rem;
       opacity: 0.9;
       margin-bottom: 1rem;
+      color: var(--text-secondary);
     }
 
     .content {
@@ -93,7 +99,7 @@
     }
 
     .section-title ion-icon {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .team-grid {
@@ -106,14 +112,17 @@
     .team-member {
       text-align: center;
       padding: 1rem;
-      background: #f8fafc;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       border-radius: 12px;
       transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .team-member:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .member-photo {
@@ -122,7 +131,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 0.5rem;
-      border: 2px solid var(--primary-color);
+      border: 2px solid var(--secondary-color);
     }
 
     .member-name {
@@ -134,7 +143,7 @@
 
     .member-role {
       font-size: 0.8rem;
-      color: var(--text-light);
+      color: var(--text-secondary);
     }
 
     .services {
@@ -148,21 +157,23 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem;
-      background: #f8fafc;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       border-radius: 12px;
       transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .service-item:hover {
-      background: #f1f5f9;
+      background: rgba(255, 255, 255, 0.15);
       transform: translateX(5px);
     }
 
     .service-icon {
       width: 40px;
       height: 40px;
-      background: var(--bg-gradient);
+      background: var(--secondary-color);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -184,7 +195,7 @@
 
     .service-desc {
       font-size: 0.8rem;
-      color: var(--text-light);
+      color: var(--text-secondary);
     }
 
     .contact-grid {
@@ -195,28 +206,30 @@
     }
 
     .contact-card {
-      background: #f8fafc;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       padding: 1rem;
       border-radius: 12px;
       text-align: center;
       transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contact-card:hover {
-      background: #f1f5f9;
+      background: rgba(255, 255, 255, 0.15);
       transform: translateY(-2px);
     }
 
     .contact-card ion-icon {
       font-size: 1.5rem;
-      color: var(--primary-color);
+      color: var(--secondary-color);
       margin-bottom: 0.5rem;
     }
 
     .contact-label {
       font-size: 0.8rem;
-      color: var(--text-light);
+      color: var(--text-secondary);
       margin-bottom: 0.3rem;
     }
 
@@ -247,102 +260,129 @@
     }
 
     .action-btn.primary {
-      background: var(--bg-gradient);
-      color: white;
+      background: var(--secondary-color);
+      color: #1e3a8a;
+      font-weight: 600;
     }
 
     .action-btn.secondary {
-      background: #f8fafc;
+      background: rgba(255, 255, 255, 0.1);
       color: var(--text-color);
-      border: 2px solid #e5e7eb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .action-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    .map-section {
+    .analytics-section {
       margin-top: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .map-placeholder {
-      background: #f8fafc;
-      border-radius: 12px;
-      padding: 2rem;
+    .analytics-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .stat {
       text-align: center;
-      color: var(--text-light);
-      border: 2px dashed #e5e7eb;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
     }
 
     .credits {
       font-size: 0.75rem;
-      color: var(--text-light);
+      color: var(--text-secondary);
       text-align: center;
       padding: 1rem;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       margin-top: 1rem;
     }
 
     .credits a {
-      color: var(--primary-color);
+      color: var(--secondary-color);
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn-inicio-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #1e3a8a;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-inicio-flotante:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      background: white;
+    }
+
+    .btn-inicio-flotante ion-icon {
+      font-size: 1.2rem;
     }
 
     @media (max-width: 480px) {
       .team-grid,
       .contact-grid,
-      .action-buttons {
+      .action-buttons,
+      .stats-grid {
         grid-template-columns: 1fr;
       }
       
       .content {
         padding: 1.5rem 1rem;
       }
+      
+      .btn-inicio-flotante .btn-text {
+        display: none;
+      }
+      
+      .btn-inicio-flotante {
+        padding: 12px;
+        border-radius: 50%;
+      }
     }
-
-
-    .btn-inicio-flotante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--primary-color, #2563eb);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.btn-inicio-flotante:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  background: var(--secondary-color, #1e40af);
-}
-
-.btn-inicio-flotante ion-icon {
-  font-size: 1.2rem;
-}
-
-/* Ocultar texto en móviles para ahorrar espacio */
-@media (max-width: 480px) {
-  .btn-inicio-flotante .btn-text {
-    display: none;
-  }
-  
-  .btn-inicio-flotante {
-    padding: 12px;
-    border-radius: 50%;
-  }
-}
   </style>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -351,9 +391,9 @@
 <body>
   <div class="card">
     <div class="header">
-      <img src="../assets/imgs/logo-empresa.jpg" alt="[Empresa]" class="logo" />
-      <div class="company-name">[Nombre Empresa]</div>
-      <div class="company-tagline">[Eslogan o especialidad]</div>
+      <img src="../assets/imgs/logo-premium-card.png" alt="Innovate Solutions" class="logo" />
+      <div class="company-name">Innovate Solutions</div>
+      <div class="company-tagline">Consultoría Tecnológica y Desarrollo de Software</div>
     </div>
 
     <div class="content">
@@ -364,14 +404,14 @@
         </div>
         <div class="team-grid">
           <div class="team-member">
-            <img src="../assets/imgs/team1.jpg" alt="Miembro 1" class="member-photo" />
-            <div class="member-name">[Nombre]</div>
-            <div class="member-role">[Cargo]</div>
+            <img src="../assets/imgs/profile1-empresarial-card.png" alt="María González" class="member-photo" />
+            <div class="member-name">María González</div>
+            <div class="member-role">CEO & Fundadora</div>
           </div>
           <div class="team-member">
-            <img src="../assets/imgs/team2.jpg" alt="Miembro 2" class="member-photo" />
-            <div class="member-name">[Nombre]</div>
-            <div class="member-role">[Cargo]</div>
+            <img src="../assets/imgs/profile2-empresarial-card.png" alt="Roberto Sánchez" class="member-photo" />
+            <div class="member-name">Roberto Sánchez</div>
+            <div class="member-role">CTO</div>
           </div>
         </div>
       </div>
@@ -382,22 +422,22 @@
           Servicios
         </div>
         <div class="services">
-          <div class="service-item" onclick="window.open('#servicio1')">
+          <div class="service-item" onclick="window.open('#desarrollo')">
             <div class="service-icon">
-              <ion-icon name="rocket-outline"></ion-icon>
+              <ion-icon name="code-slash-outline"></ion-icon>
             </div>
             <div class="service-info">
-              <div class="service-name">Servicio 1</div>
-              <div class="service-desc">Descripción breve del servicio</div>
+              <div class="service-name">Desarrollo Web</div>
+              <div class="service-desc">Aplicaciones y sitios web a medida</div>
             </div>
           </div>
-          <div class="service-item" onclick="window.open('#servicio2')">
+          <div class="service-item" onclick="window.open('#consultoria')">
             <div class="service-icon">
               <ion-icon name="bar-chart-outline"></ion-icon>
             </div>
             <div class="service-info">
-              <div class="service-name">Servicio 2</div>
-              <div class="service-desc">Descripción breve del servicio</div>
+              <div class="service-name">Consultoría TI</div>
+              <div class="service-desc">Optimización de procesos tecnológicos</div>
             </div>
           </div>
         </div>
@@ -409,25 +449,25 @@
           Contacto
         </div>
         <div class="contact-grid">
-          <div class="contact-card" onclick="window.open('tel:+521234567890')">
+          <div class="contact-card" onclick="window.open('tel:+525551234567')">
             <ion-icon name="call-outline"></ion-icon>
             <div class="contact-label">Teléfono</div>
-            <div class="contact-value">+52 123 456 7890</div>
+            <div class="contact-value">+52 55 5123 4567</div>
           </div>
-          <div class="contact-card" onclick="window.open('mailto:info@empresa.com')">
+          <div class="contact-card" onclick="window.open('mailto:info@innovatesolutions.com')">
             <ion-icon name="mail-outline"></ion-icon>
             <div class="contact-label">Email</div>
-            <div class="contact-value">info@empresa.com</div>
+            <div class="contact-value">info@innovatesolutions.com</div>
           </div>
-          <div class="contact-card" onclick="window.open('https://wa.me/521234567890')">
+          <div class="contact-card" onclick="window.open('https://wa.me/525551234567')">
             <ion-icon name="logo-whatsapp"></ion-icon>
             <div class="contact-label">WhatsApp</div>
             <div class="contact-value">Enviar mensaje</div>
           </div>
-          <div class="contact-card" onclick="window.open('https://empresa.com')">
+          <div class="contact-card" onclick="window.open('https://innovatesolutions.com')">
             <ion-icon name="globe-outline"></ion-icon>
             <div class="contact-label">Sitio Web</div>
-            <div class="contact-value">empresa.com</div>
+            <div class="contact-value">innovatesolutions.com</div>
           </div>
         </div>
       </div>
@@ -443,30 +483,34 @@
         </button>
       </div>
 
-      <div class="map-section">
-        <div class="section-title">
-          <ion-icon name="location-outline"></ion-icon>
-          Ubicación
+      <div class="analytics-section">
+        <div class="analytics-title">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+          Analytics de Visitas
         </div>
-        <div class="map-placeholder" onclick="window.open('https://maps.google.com')">
-          <ion-icon name="map-outline" style="font-size: 2rem; margin-bottom: 0.5rem;"></ion-icon>
-          <div>Ver en Google Maps</div>
-          <div style="font-size: 0.8rem; margin-top: 0.3rem;">[Dirección completa]</div>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-number" id="totalVisits">1,247</div>
+            <div class="stat-label">Visitas Totales</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" id="monthlyVisits">89</div>
+            <div class="stat-label">Este Mes</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="credits">
-      © 2024 [Nombre Empresa] | 
-      <a href="https://ramonsalas.com" target="_blank">Diseñado por Ramón Salas</a>
+      © 2024 Innovate Solutions | 
+      <a href="https://mexicodigitalcards.com" target="_blank">Tarjeta Digital Empresarial por Ramón Salas</a>
     </div>
   </div>
 
-  <button class="btn-inicio-flotante" onclick="window.location.href = 'https://vcardsmx.netlify.app/'">
-  <ion-icon name="home-outline"></ion-icon>
-  <span class="btn-text">Inicio</span>
-</button>
-
+  <button class="btn-inicio-flotante" onclick="window.location.href = 'https://mexicodigitalcards.com/'">
+    <ion-icon name="home-outline"></ion-icon>
+    <span class="btn-text">Inicio</span>
+  </button>
 
   <script>
     const urlTarjeta = window.location.href;
@@ -475,8 +519,8 @@
       if (navigator.share) {
         try {
           await navigator.share({
-            title: document.querySelector('.company-name').textContent,
-            text: document.querySelector('.company-tagline').textContent,
+            title: "Innovate Solutions - Consultoría Tecnológica",
+            text: "Te comparto la tarjeta digital de Innovate Solutions, especialistas en desarrollo de software y consultoría TI",
             url: urlTarjeta
           });
         } catch (error) {
@@ -490,22 +534,31 @@
     });
 
     document.getElementById("btnAgendar").addEventListener("click", () => {
-      // Integración con calendario (puedes conectar con Calendly, Google Calendar, etc.)
-      window.open('https://calendly.com/empresa/consulta', '_blank');
+      window.open('https://calendly.com/innovatesolutions/consulta', '_blank');
     });
+
+    // Simular analytics (en producción conectarías con Google Analytics)
+    function actualizarAnalytics() {
+      const total = Math.floor(Math.random() * 500) + 1000;
+      const mensual = Math.floor(Math.random() * 50) + 50;
+      document.getElementById('totalVisits').textContent = total.toLocaleString();
+      document.getElementById('monthlyVisits').textContent = mensual;
+    }
+
+    actualizarAnalytics();
+    setInterval(actualizarAnalytics, 30000); // Actualizar cada 30 segundos
 
     // Función para guardar contacto empresarial
     function guardarContactoEmpresarial() {
-      const empresa = document.querySelector('.company-name').textContent;
       const vcf = `BEGIN:VCARD
 VERSION:3.0
-FN:${empresa}
-ORG:${empresa}
-TEL;TYPE=WORK,pref,voice:+521234567890
-EMAIL;TYPE=WORK:info@empresa.com
-URL:https://empresa.com
-ADR;TYPE=WORK:;;[Dirección];[Ciudad];[Estado];[Código Postal];[País]
-NOTE:${document.querySelector('.company-tagline').textContent}
+FN:Innovate Solutions
+ORG:Innovate Solutions
+TEL;TYPE=WORK,pref,voice:+525551234567
+EMAIL;TYPE=WORK:info@innovatesolutions.com
+URL:https://innovatesolutions.com
+ADR;TYPE=WORK:;;Av. Reforma 123;Ciudad de México;CDMX;06600;México
+NOTE:Consultoría Tecnológica y Desarrollo de Software
 END:VCARD`;
 
       const blob = new Blob([vcf], { type: "text/vcard;charset=utf-8" });
@@ -513,7 +566,7 @@ END:VCARD`;
       
       const link = document.createElement("a");
       link.href = url;
-      link.download = "contacto-empresarial.vcf";
+      link.download = "innovate-solutions.vcf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
